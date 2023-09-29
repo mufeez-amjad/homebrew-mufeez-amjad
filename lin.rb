@@ -8,26 +8,36 @@ class Lin < Formula
   version "0.0.2"
 
   on_macos do
-    url "https://github.com/mufeez-amjad/lin/releases/download/v0.0.2/lin_0.0.2_darwin_all.tar.gz"
-    sha256 "33265c84125ff06114475710c4cd8259ef892ba4c53404544182a0fbc80fed26"
-
-    def install
-      bin.install "lin"
-    end
-  end
-
-  on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/mufeez-amjad/lin/releases/download/v0.0.2/lin_0.0.2_linux_arm64.tar.gz"
-      sha256 "2e72e569242a5a94e5a13f6e683c8da76275d82df0efafc409a8977ff6fdee5e"
+    if Hardware::CPU.arm?
+      url "https://github.com/mufeez-amjad/lin/releases/download/v0.0.2/lin_0.0.2_darwin_arm64.tar.gz"
+      sha256 "0944ab8c2cc59316d29ca8a441535bc284ff65e14fe262b9d13e9a585222918f"
 
       def install
         bin.install "lin"
       end
     end
     if Hardware::CPU.intel?
+      url "https://github.com/mufeez-amjad/lin/releases/download/v0.0.2/lin_0.0.2_darwin_amd64.tar.gz"
+      sha256 "24e0cd000996f82baa308057ffed991c2287641d5fa1f9e52bf324bd7fed33d8"
+
+      def install
+        bin.install "lin"
+      end
+    end
+  end
+
+  on_linux do
+    if Hardware::CPU.intel?
       url "https://github.com/mufeez-amjad/lin/releases/download/v0.0.2/lin_0.0.2_linux_amd64.tar.gz"
-      sha256 "dc90be7dcee92c60ade98acfd6fbbb630b6c0fe3933045a23db69ddb9c686a9d"
+      sha256 "da947bc03951ac6194c732fd944c3ff429c927c2ad91ae8cba4c97958111a080"
+
+      def install
+        bin.install "lin"
+      end
+    end
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/mufeez-amjad/lin/releases/download/v0.0.2/lin_0.0.2_linux_arm64.tar.gz"
+      sha256 "47e49c3077f2e3f5b50e44fdcf3464bfee453071484519df7cbef212a63ba428"
 
       def install
         bin.install "lin"

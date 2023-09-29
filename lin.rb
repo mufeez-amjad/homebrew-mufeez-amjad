@@ -10,7 +10,7 @@ class Lin < Formula
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/mufeez-amjad/lin/releases/download/v0.0.2/lin_0.0.2_darwin_arm64.tar.gz"
-      sha256 "0944ab8c2cc59316d29ca8a441535bc284ff65e14fe262b9d13e9a585222918f"
+      sha256 "0902dd82c52642458e2cbfec04d48e22084b6e909f6a82c638fc4068c2cfe572"
 
       def install
         bin.install "lin"
@@ -18,7 +18,7 @@ class Lin < Formula
     end
     if Hardware::CPU.intel?
       url "https://github.com/mufeez-amjad/lin/releases/download/v0.0.2/lin_0.0.2_darwin_amd64.tar.gz"
-      sha256 "24e0cd000996f82baa308057ffed991c2287641d5fa1f9e52bf324bd7fed33d8"
+      sha256 "dd1d3dfa90dd18633436cafab653bd52bdb6418089d4ae5c5298c815e0044e9d"
 
       def install
         bin.install "lin"
@@ -29,7 +29,7 @@ class Lin < Formula
   on_linux do
     if Hardware::CPU.intel?
       url "https://github.com/mufeez-amjad/lin/releases/download/v0.0.2/lin_0.0.2_linux_amd64.tar.gz"
-      sha256 "da947bc03951ac6194c732fd944c3ff429c927c2ad91ae8cba4c97958111a080"
+      sha256 "eb3869ac9f0ebe85f8996bb52203a2723ed2a76068dff5190237736033ca06e2"
 
       def install
         bin.install "lin"
@@ -37,7 +37,7 @@ class Lin < Formula
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/mufeez-amjad/lin/releases/download/v0.0.2/lin_0.0.2_linux_arm64.tar.gz"
-      sha256 "47e49c3077f2e3f5b50e44fdcf3464bfee453071484519df7cbef212a63ba428"
+      sha256 "e6c85aabbd20cb1d92bb38d36c080fdce160b05f704e84fc1a5cfabed4b4948d"
 
       def install
         bin.install "lin"

@@ -5,20 +5,20 @@
 class Lin < Formula
   desc ""
   homepage "https://github.com/mufeez-amjad/lin"
-  version "0.0.2"
+  version "0.0.3"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/mufeez-amjad/lin/releases/download/v0.0.2/lin_0.0.2_darwin_arm64.tar.gz"
-      sha256 "0902dd82c52642458e2cbfec04d48e22084b6e909f6a82c638fc4068c2cfe572"
+      url "https://github.com/mufeez-amjad/lin/releases/download/v0.0.3/lin_0.0.3_darwin_arm64.tar.gz"
+      sha256 "4c5b077f7f278b7130700e3e3515f906a6de2fa29e12cf3940953704cf4cda1b"
 
       def install
         bin.install "lin"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/mufeez-amjad/lin/releases/download/v0.0.2/lin_0.0.2_darwin_amd64.tar.gz"
-      sha256 "dd1d3dfa90dd18633436cafab653bd52bdb6418089d4ae5c5298c815e0044e9d"
+      url "https://github.com/mufeez-amjad/lin/releases/download/v0.0.3/lin_0.0.3_darwin_amd64.tar.gz"
+      sha256 "020e959a5a1e77bda3ade433a5d9ca29b2222a81dc8950bc14b9f3a330393590"
 
       def install
         bin.install "lin"
@@ -28,16 +28,16 @@ class Lin < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/mufeez-amjad/lin/releases/download/v0.0.2/lin_0.0.2_linux_amd64.tar.gz"
-      sha256 "eb3869ac9f0ebe85f8996bb52203a2723ed2a76068dff5190237736033ca06e2"
+      url "https://github.com/mufeez-amjad/lin/releases/download/v0.0.3/lin_0.0.3_linux_amd64.tar.gz"
+      sha256 "82bb33723992993ecb66112855e44a4209ed63d255ae623fc79af30600f6576a"
 
       def install
         bin.install "lin"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/mufeez-amjad/lin/releases/download/v0.0.2/lin_0.0.2_linux_arm64.tar.gz"
-      sha256 "e6c85aabbd20cb1d92bb38d36c080fdce160b05f704e84fc1a5cfabed4b4948d"
+      url "https://github.com/mufeez-amjad/lin/releases/download/v0.0.3/lin_0.0.3_linux_arm64.tar.gz"
+      sha256 "4f6164c14642e038b00befbb0fd3c91e3a10b591232b045aec79c0cddd582efd"
 
       def install
         bin.install "lin"

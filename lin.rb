@@ -5,20 +5,20 @@
 class Lin < Formula
   desc ""
   homepage "https://github.com/mufeez-amjad/lin"
-  version "0.0.8"
+  version "0.0.9"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/mufeez-amjad/lin/releases/download/v0.0.8/lin_0.0.8_darwin_arm64.tar.gz"
-      sha256 "afc1b24acefe302e2ddb5ce99a1b247faff436d64da9e0ab0ba4cb3a36b084e2"
+      url "https://github.com/mufeez-amjad/lin/releases/download/v0.0.9/lin_0.0.9_darwin_arm64.tar.gz"
+      sha256 "5fb68cf87af4940793c8885118b4ef1add55325e3166391507874f9fd6ffa47a"
 
       def install
         bin.install "lin"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/mufeez-amjad/lin/releases/download/v0.0.8/lin_0.0.8_darwin_amd64.tar.gz"
-      sha256 "8236be745a36f4c383c7af25865d2c1c8c3779074873d09013f14c5e738f7209"
+      url "https://github.com/mufeez-amjad/lin/releases/download/v0.0.9/lin_0.0.9_darwin_amd64.tar.gz"
+      sha256 "ed50f3aa8c2733fbf6bdbef399e46905c96210bc72d46f61cd59c00f15eaf8c5"
 
       def install
         bin.install "lin"
@@ -27,17 +27,17 @@ class Lin < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/mufeez-amjad/lin/releases/download/v0.0.8/lin_0.0.8_linux_amd64.tar.gz"
-      sha256 "9017041b60372620208f230c9d860b37634cc00d3a53a2004d975290aefa38ac"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/mufeez-amjad/lin/releases/download/v0.0.9/lin_0.0.9_linux_arm64.tar.gz"
+      sha256 "9e97979e38ddfb5138c5add08e888ab79dfe971f432750ad82937b7d11a72b37"
 
       def install
         bin.install "lin"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/mufeez-amjad/lin/releases/download/v0.0.8/lin_0.0.8_linux_arm64.tar.gz"
-      sha256 "cc5ea6bf51af5a362747f2a4f18fc6da27d32b8045ed58621608eadff059bbe9"
+    if Hardware::CPU.intel?
+      url "https://github.com/mufeez-amjad/lin/releases/download/v0.0.9/lin_0.0.9_linux_amd64.tar.gz"
+      sha256 "0eece1c1da75437a55f8b727393e0d5d23de34b1d555e854d311c3c37095ba6e"
 
       def install
         bin.install "lin"
